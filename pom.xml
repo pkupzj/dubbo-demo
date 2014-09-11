@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.jingwei</groupId>
+    <groupId>com.zijian</groupId>
     <artifactId>dubbo-demo-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -11,39 +11,99 @@
     <developers>
         <developer>
             <name>潘自建</name>
-            <email>zijian.pan@renren-inc.com</email>
+            <email>pzj1@163.com</email>
         </developer>
     </developers>
 
-    <parent>
-        <groupId>com.jingwei</groupId>
-        <artifactId>jingwei-root-pom</artifactId>
-        <version>2.0.0-SNAPSHOT</version>
-    </parent>
-
     <modules>
-        <module>demo-consumer</module>
-        <module>demo-ugc-service</module>
-        <module>demo-feed-service</module>
+    <!--    <module>dubbo-demo-consumer</module>-->
+        <module>dubbo-demo-serviceA</module>
+       <!-- <module>dubbo-demo-serviceB</module>-->
     </modules>
+    <properties>
 
+        <!-- Common libs -->
+        <dubbo_version>2.5.3</dubbo_version>
+        <spring_version>2.5.6.SEC03</spring_version>
+        <javassist_version>3.15.0-GA</javassist_version>
+        <netty_version>3.2.5.Final</netty_version>
+        <fastjson_version>1.1.39</fastjson_version>
+        <zookeeper_version>3.3.3</zookeeper_version>
+        <zkclient_version>0.1</zkclient_version>
+        <curator_version>1.1.16</curator_version>
+        <!-- Log libs -->
+        <slf4j_version>1.6.2</slf4j_version>
+        <log4j_version>1.2.16</log4j_version>
+        <!-- Test libs -->
+        <junit_version>4.10</junit_version>
+
+    </properties>
     <dependencyManagement>
         <dependencies>
+            <!-- Common libs -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.javassist</groupId>
                 <artifactId>javassist</artifactId>
-                <version>3.15.0-GA</version>
+                <version>${javassist_version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jboss.netty</groupId>
                 <artifactId>netty</artifactId>
-                <version>3.2.5.Final</version>
-                <!--$NO-MVN-MAN-VER$-->
+                <version>${netty_version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jingwei</groupId>
-                <artifactId>zk-client</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.netflix.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator_version}</version>
+            </dependency>
+
+            <!-- Log libs -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j_version}</version>
+            </dependency>
+            <!-- Test libs -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit_version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
