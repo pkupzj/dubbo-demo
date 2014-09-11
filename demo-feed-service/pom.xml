@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.jingwei</groupId>
+	<artifactId>dubbo-demo-feed-parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>demo-feed-parent</name>
+
+    <parent>
+        <groupId>com.jingwei</groupId>
+        <artifactId>dubbo-demo-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+	<!-- 开发人员说明 -->
+	<developers>
+		<developer>
+			<name>潘自建</name>
+			<email>zijian.pan@renren-inc.com</email>
+		</developer>
+	</developers>
+
+	<modules>
+		<module>demo-feed-api</module>
+		<module>demo-feed-client</module>
+		<module>demo-feed-provider</module> 
+	</modules>
+
+
+
+</project>
+
