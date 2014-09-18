@@ -49,7 +49,7 @@
 			<artifactId>zookeeper</artifactId>
 		</dependency>
         <dependency>
-            <groupId>zkclient</groupId>
+            <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
         </dependency>
         <!--test-->
