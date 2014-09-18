@@ -16,24 +16,23 @@
     </developers>
 
     <modules>
-    <!--    <module>dubbo-demo-consumer</module>-->
+        <module>dubbo-demo-consumer</module>
         <module>dubbo-demo-serviceA</module>
-       <!-- <module>dubbo-demo-serviceB</module>-->
+        <module>dubbo-demo-serviceB</module>
     </modules>
     <properties>
-
         <!-- Common libs -->
         <dubbo_version>2.5.3</dubbo_version>
-        <spring_version>2.5.6.SEC03</spring_version>
+        <spring_version>3.1.2.RELEASE</spring_version>
         <javassist_version>3.15.0-GA</javassist_version>
         <netty_version>3.2.5.Final</netty_version>
         <fastjson_version>1.1.39</fastjson_version>
         <zookeeper_version>3.3.3</zookeeper_version>
-        <zkclient_version>0.1</zkclient_version>
+        <zkclient_version>0.1.0</zkclient_version>
         <curator_version>1.1.16</curator_version>
         <!-- Log libs -->
-        <slf4j_version>1.6.2</slf4j_version>
-        <log4j_version>1.2.16</log4j_version>
+        <slf4j_version>1.5.8</slf4j_version>
+        <log4j_version>1.2.15</log4j_version>
         <!-- Test libs -->
         <junit_version>4.10</junit_version>
 
@@ -48,7 +47,43 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring</artifactId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring_version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jms</artifactId>
                 <version>${spring_version}</version>
             </dependency>
             <dependency>
@@ -72,7 +107,7 @@
                 <version>${zookeeper_version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.sgroschupf</groupId>
+                <groupId>zkclient</groupId>
                 <artifactId>zkclient</artifactId>
                 <version>${zkclient_version}</version>
             </dependency>
@@ -81,7 +116,11 @@
                 <artifactId>curator-framework</artifactId>
                 <version>${curator_version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.netflix.curator</groupId>
+                <artifactId>curator-client</artifactId>
+                <version>${curator_version}</version>
+            </dependency>
             <!-- Log libs -->
             <dependency>
                 <groupId>org.slf4j</groupId>

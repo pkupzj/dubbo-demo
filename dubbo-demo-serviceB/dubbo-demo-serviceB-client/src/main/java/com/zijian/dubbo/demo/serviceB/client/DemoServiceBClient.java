@@ -1,6 +1,6 @@
-package com.zijian.dubbo.demo.serviceA.client;
+package com.zijian.dubbo.demo.serviceB.client;
 
-import com.zijian.dubbo.demo.serviceA.api.DemoServiceA;
+import com.zijian.dubbo.demo.serviceB.api.DemoServiceB;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component;
  * Created by zijian on 8/22/14.
  */
 @Component
-public class DemoServiceAClient {
+public class DemoServiceBClient {
 
 	@Autowired
-	private DemoServiceA demoServiceA;
+	private DemoServiceB demoServiceB;
 
 	public void hello(String name) {
-		demoServiceA.hello(name);
+		demoServiceB.hello(name);
 	}
 }
