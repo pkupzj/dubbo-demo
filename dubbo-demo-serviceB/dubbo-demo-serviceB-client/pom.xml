@@ -49,8 +49,8 @@
 			<artifactId>zookeeper</artifactId>
 		</dependency>
         <dependency>
-            <groupId>com.netflix.curator</groupId>
-            <artifactId>curator-framework</artifactId>
+            <groupId>zkclient</groupId>
+            <artifactId>zkclient</artifactId>
         </dependency>
         <!--test-->
         <dependency>

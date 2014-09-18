@@ -26,11 +26,11 @@
             <artifactId>dubbo-demo-serviceA-client</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>com.zijian</groupId>
             <artifactId>dubbo-demo-serviceB-client</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 </project>
 

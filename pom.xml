@@ -146,5 +146,24 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <plugins>
+            <!-- 使用1.6级别编译；代码为UTF-8编码；只编译指定的位置 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <verbose>true</verbose>
+                    <encoding>UTF-8</encoding>
+                    <compilerArguments>
+                        <sourcepath>${project.basedir}/${project.build.sourceDirectory}
+                        </sourcepath>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
 
