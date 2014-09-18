@@ -1,7 +1,7 @@
 package com.zijian.dubbo.demo.serviceB.client;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.zijian.dubbo.demo.serviceB.api.DemoServiceB;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class DemoServiceBClient {
 
-	@Autowired
+	@Reference(version = "1.0.0")
 	private DemoServiceB demoServiceB;
 
-	public void hello(String name) {
-		demoServiceB.hello(name);
+	public String hello(String name) {
+		return demoServiceB.hello(name);
 	}
 }

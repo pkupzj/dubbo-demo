@@ -11,6 +11,8 @@
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 	<context:component-scan base-package="com.zijian.dubbo.demo.serviceB.client"/>
-    <dubbo:reference interface="com.zijian.dubbo.demo.serviceB.api.DemoServiceB" version="1.0.0"
-                     check="false"/>
+    <dubbo:annotation package="com.zijian.dubbo.demo.serviceB.client"/>
+    <!--<dubbo:reference id="demoServiceB" interface="com.zijian.dubbo.demo.serviceB.api.DemoServiceB" version="1.0.0"
+                     check="false"/>-->
+
 </beans>

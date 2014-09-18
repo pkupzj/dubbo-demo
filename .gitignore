@@ -11,6 +11,7 @@ logs/
 .classpath
 .DS_Store
 dist/
+dist.dir/
 *~
 *.iml
 .idea

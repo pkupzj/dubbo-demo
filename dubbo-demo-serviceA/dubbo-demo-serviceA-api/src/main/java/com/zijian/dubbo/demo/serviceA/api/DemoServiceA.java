@@ -4,5 +4,5 @@ package com.zijian.dubbo.demo.serviceA.api;
  * Created by zijian on 8/22/14.
  */
 public interface DemoServiceA {
-	public void hello(String name);
+	public String hello(String name);
 }
